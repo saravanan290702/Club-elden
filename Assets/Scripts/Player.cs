@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -15,9 +16,11 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerData playerData;
-#endregion
+    #endregion
 
-#region  Components
+    #region  Components
+
+    public Core Core { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
     public Animator Anim { get; private set; }
     public Rigidbody2D RB { get; private set; }
@@ -25,7 +28,10 @@ public class Player : MonoBehaviour
 
 #region Other Variables
     private Vector2 workSpace;
-    
+
+    private Weapon primaryWeapon;
+    private Weapon secondaryWeapon;
+
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection {get; private set;}
 #endregion
@@ -38,12 +44,19 @@ public class Player : MonoBehaviour
 #region Unity Callbacks
     private void Awake()
     {
+        Core = GetComponentInChildren<Core>();
+
+        primaryWeapon = transform.Find("PrimaryWeapon").GetComponent<Weapon>();
+        secondaryWeapon = transform.Find("SecondaryWeapon").GetComponent<Weapon>();
+
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
         JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
         InAirState = new PlayerinAirState(this, StateMachine, playerData, "inAir");
         LandState = new PlayerLandState(this, StateMachine, playerData, "land");
+        PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack", primaryWeapon);
+        SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack", secondaryWeapon);
     }
 
     private void Start()
