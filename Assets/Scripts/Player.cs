@@ -24,9 +24,12 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     public Animator Anim { get; private set; }
     public Rigidbody2D RB { get; private set; }
-#endregion
+    public PlayerAttackState PrimaryAttackState { get; private set; }
+    public PlayerAttackState SecondaryAttackState { get; private set; }
 
-#region Other Variables
+    #endregion
+
+    #region Other Variables
     private Vector2 workSpace;
 
     private Weapon primaryWeapon;
@@ -46,6 +49,7 @@ public class Player : MonoBehaviour
     {
         Core = GetComponentInChildren<Core>();
 
+        //Automatically assigning reference of Primary and Secondary Weapon on Awake()
         primaryWeapon = transform.Find("PrimaryWeapon").GetComponent<Weapon>();
         secondaryWeapon = transform.Find("SecondaryWeapon").GetComponent<Weapon>();
 
