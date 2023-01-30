@@ -52986,6 +52986,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1600915341}
     m_Modifications:
+    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: numberOfAttacks
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: attackCounterResetCooldown
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1503314253506842655, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: m_Name
       value: SecondaryWeapon
@@ -53051,6 +53059,14 @@ PrefabInstance:
     - target: {fileID: 335460638, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: numberOfAttacks
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: attackCounterResetCooldown
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1503314253506842655, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: m_Name
