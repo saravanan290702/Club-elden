@@ -693,6 +693,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &363443425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1503314253506842655, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+  m_PrefabInstance: {fileID: 2150470838572180612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +851,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &587095344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1503314253506842655, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+  m_PrefabInstance: {fileID: 2031055290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &605553951
 GameObject:
   m_ObjectHideFlags: 3
@@ -41011,6 +41021,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &818641198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 859836937308426427, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+  m_PrefabInstance: {fileID: 2031055290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &818641202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818641198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79313a15932b0af4db83d1bd2d7546d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSprites: []
 --- !u!1 &829643159
 GameObject:
   m_ObjectHideFlags: 0
@@ -52987,6 +53015,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1600915341}
     m_Modifications:
     - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1600915339}
+    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: numberOfAttacks
       value: 3
       objectReference: {fileID: 0}
@@ -53042,13 +53074,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
 --- !u!4 &2031055291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2472907197485643119, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
   m_PrefabInstance: {fileID: 2031055290}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2031055293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587095344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79313a15932b0af4db83d1bd2d7546d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSprites: []
 --- !u!1001 &2150470838572180612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53056,22 +53102,86 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1600915341}
     m_Modifications:
-    - target: {fileID: 335460638, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
-      propertyPath: numberOfAttacks
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
-      propertyPath: attackCounterResetCooldown
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1503314253506842655, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: m_Name
       value: PrimaryWeapon
       objectReference: {fileID: 0}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[0].<Sprites>k__BackingField.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[1].<Sprites>k__BackingField.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[2].<Sprites>k__BackingField.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[0].<Sprites>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 1486955390, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[0].<Sprites>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: 1393712321, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[0].<Sprites>k__BackingField.Array.data[2]
+      value: 
+      objectReference: {fileID: 1031786119, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[0].<Sprites>k__BackingField.Array.data[3]
+      value: 
+      objectReference: {fileID: 426071798, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[0].<Sprites>k__BackingField.Array.data[4]
+      value: 
+      objectReference: {fileID: 1531266999, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[1].<Sprites>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: -968409885, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[1].<Sprites>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: -479346158, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[1].<Sprites>k__BackingField.Array.data[2]
+      value: 
+      objectReference: {fileID: -1421055239, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[1].<Sprites>k__BackingField.Array.data[3]
+      value: 
+      objectReference: {fileID: 1011666675, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[1].<Sprites>k__BackingField.Array.data[4]
+      value: 
+      objectReference: {fileID: -84049782, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[2].<Sprites>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 1471487723, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[2].<Sprites>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: 669378768, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[2].<Sprites>k__BackingField.Array.data[2]
+      value: 
+      objectReference: {fileID: -1853084921, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[2].<Sprites>k__BackingField.Array.data[3]
+      value: 
+      objectReference: {fileID: -844519567, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
+    - target: {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: weaponSprites.Array.data[2].<Sprites>k__BackingField.Array.data[4]
+      value: 
+      objectReference: {fileID: 653665925, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
     - target: {fileID: 2472907197485643119, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -53116,10 +53226,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2258149760160336611, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
 --- !u!4 &2150470838572180613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2472907197485643119, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
   m_PrefabInstance: {fileID: 2150470838572180612}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2150470838572180615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363443425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79313a15932b0af4db83d1bd2d7546d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSprites:
+  - <Sprites>k__BackingField:
+    - {fileID: 1486955390, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - {fileID: 1393712321, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - {fileID: 1031786119, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - {fileID: 426071798, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+    - {fileID: 1531266999, guid: 290b694796b092640afe9ac6ee108703, type: 3}
+  - <Sprites>k__BackingField:
+    - {fileID: -968409885, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - {fileID: -479346158, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - {fileID: -1421055239, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - {fileID: 1011666675, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+    - {fileID: -84049782, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
+  - <Sprites>k__BackingField:
+    - {fileID: 1471487723, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
+    - {fileID: 669378768, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
+    - {fileID: -1853084921, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
+    - {fileID: -844519567, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
+    - {fileID: 653665925, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}

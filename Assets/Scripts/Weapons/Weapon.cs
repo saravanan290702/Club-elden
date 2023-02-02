@@ -14,10 +14,14 @@ public class Weapon : MonoBehaviour
         get => currentAttackCounter;
         private set => currentAttackCounter = value >= numberOfAttacks ? 0 : value;
     }
-
+    
+    public event Action OnEnter;
     public event Action OnExit;
+
     private Animator anim;
-    private GameObject baseGameObject;
+    public GameObject BaseGameObject { get; private set; }
+    public GameObject WeaponSpriteObject { get; private set; }
+
     private WeaponAnimationEventHandler eventHandler;
 
     private int currentAttackCounter;
@@ -26,9 +30,13 @@ public class Weapon : MonoBehaviour
 
     private void Awake()
     {
-        baseGameObject = transform.Find("Base").gameObject;
-        anim = baseGameObject.GetComponent<Animator>();
-        eventHandler = baseGameObject.GetComponent<WeaponAnimationEventHandler>();
+        BaseGameObject = transform.Find("Base").gameObject;
+
+        WeaponSpriteObject = transform.Find("WeaponSprite").gameObject;
+
+        anim = BaseGameObject.GetComponent<Animator>();
+
+        eventHandler = BaseGameObject.GetComponent<WeaponAnimationEventHandler>();
 
         attackCounterResetTimer = new Timer(attackCounterResetCooldown);
     }
@@ -51,13 +59,17 @@ public class Weapon : MonoBehaviour
     }
     public void Enter()
     {
+
+
+        attackCounterResetTimer.StopTimer();
+            
         anim.SetBool("active", true);
         anim.SetInteger("counter", CurrentAttackCounter);
 
-        attackCounterResetTimer.StopTimer();
-
         //Debug Statement
         print($"{transform.name} enter");
+
+        OnEnter?.Invoke();
     }
 
     private void OnEnable()
