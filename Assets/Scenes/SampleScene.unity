@@ -41038,7 +41038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79313a15932b0af4db83d1bd2d7546d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSprites: []
 --- !u!1 &829643159
 GameObject:
   m_ObjectHideFlags: 0
@@ -53023,6 +53022,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: <Data>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 008f5ac4bb8a65a4d9a278ed3d744d70, type: 2}
+    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: attackCounterResetCooldown
       value: 3
       objectReference: {fileID: 0}
@@ -53094,7 +53097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79313a15932b0af4db83d1bd2d7546d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSprites: []
 --- !u!1001 &2150470838572180612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53102,6 +53104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1600915341}
     m_Modifications:
+    - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: <Data>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 39daaace2eee08248aa9bbe8451d1022, type: 2}
     - target: {fileID: 1503314253506842655, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: m_Name
       value: PrimaryWeapon
@@ -53246,22 +53252,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79313a15932b0af4db83d1bd2d7546d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSprites:
-  - <Sprites>k__BackingField:
-    - {fileID: 1486955390, guid: 290b694796b092640afe9ac6ee108703, type: 3}
-    - {fileID: 1393712321, guid: 290b694796b092640afe9ac6ee108703, type: 3}
-    - {fileID: 1031786119, guid: 290b694796b092640afe9ac6ee108703, type: 3}
-    - {fileID: 426071798, guid: 290b694796b092640afe9ac6ee108703, type: 3}
-    - {fileID: 1531266999, guid: 290b694796b092640afe9ac6ee108703, type: 3}
-  - <Sprites>k__BackingField:
-    - {fileID: -968409885, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
-    - {fileID: -479346158, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
-    - {fileID: -1421055239, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
-    - {fileID: 1011666675, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
-    - {fileID: -84049782, guid: d76476ce214e9b044ba7d114a463ab16, type: 3}
-  - <Sprites>k__BackingField:
-    - {fileID: 1471487723, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
-    - {fileID: 669378768, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
-    - {fileID: -1853084921, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
-    - {fileID: -844519567, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}
-    - {fileID: 653665925, guid: 39316cc94f1a6fd49a2d9bbf42e5e67e, type: 3}

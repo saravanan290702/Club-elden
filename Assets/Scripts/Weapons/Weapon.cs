@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-
-    [SerializeField] private int numberOfAttacks;
+    [field: SerializeField] public WeaponDataSO Data { get; private set; }
     [SerializeField] private float attackCounterResetCooldown;
 
     public int CurrentAttackCounter
     {
         get => currentAttackCounter;
-        private set => currentAttackCounter = value >= numberOfAttacks ? 0 : value;
+        private set => currentAttackCounter = value >= Data.NumberOfAttacks ? 0 : value;
     }
     
     public event Action OnEnter;
