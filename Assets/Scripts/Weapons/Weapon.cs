@@ -21,7 +21,9 @@ public class Weapon : MonoBehaviour
     public GameObject BaseGameObject { get; private set; }
     public GameObject WeaponSpriteObject { get; private set; }
 
-    private WeaponAnimationEventHandler eventHandler;
+    public WeaponAnimationEventHandler EventHandler { get; private set; }
+
+    public Core Core { get; private set; }
 
     private int currentAttackCounter;
 
@@ -35,9 +37,14 @@ public class Weapon : MonoBehaviour
 
         anim = BaseGameObject.GetComponent<Animator>();
 
-        eventHandler = BaseGameObject.GetComponent<WeaponAnimationEventHandler>();
+        EventHandler = BaseGameObject.GetComponent<WeaponAnimationEventHandler>();
 
         attackCounterResetTimer = new Timer(attackCounterResetCooldown);
+    }
+
+    public void SetCore(Core core)
+    {
+        Core = core;
     }
 
     private void Update()
@@ -73,13 +80,13 @@ public class Weapon : MonoBehaviour
 
     private void OnEnable()
     {
-        eventHandler.OnFinish += Exit;
+        EventHandler.OnFinish += Exit;
         attackCounterResetTimer.OnTimerDone += ResetAttackCounter;
     }
 
     private void OnDisable()
     {
-        eventHandler.OnFinish -= Exit;
+        EventHandler.OnFinish -= Exit;
         attackCounterResetTimer.OnTimerDone -= ResetAttackCounter;
     }
 }
