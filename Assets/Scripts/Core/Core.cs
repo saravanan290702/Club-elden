@@ -8,6 +8,7 @@ using UnityEngine;
 
         private void Awake()
         {
+
         }
 
         public void LogicUpdate()
