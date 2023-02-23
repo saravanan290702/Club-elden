@@ -3,14 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponSprite : WeaponComponent
+public class WeaponSprite : WeaponComponent<WeaponSpriteData,AttackSprites>
 {
     private SpriteRenderer baseSpriteRenderer;
     private SpriteRenderer weaponSpriteRenderer;
 
     private int currentWeaponSpriteIndex;
-
-    private WeaponSpriteData data;
 
     protected override void HandleEnter()
     {
@@ -26,7 +24,7 @@ public class WeaponSprite : WeaponComponent
             return;
         }
 
-        var currentAttackSprites = data.AttackData[weapon.CurrentAttackCounter].Sprites;
+        var currentAttackSprites = currentAttackData.Sprites;
 
         if (currentWeaponSpriteIndex >= currentAttackSprites.Length)
         {
