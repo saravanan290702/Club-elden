@@ -53097,6 +53097,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79313a15932b0af4db83d1bd2d7546d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2031055294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587095344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f65bc6e87d9dd439a6c0ff213094a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2150470838572180612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53104,6 +53116,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1600915341}
     m_Modifications:
+    - target: {fileID: 335460638, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339446420670952755, guid: 3e33a21b9ec52ee47b1bff24ac1c86f5, type: 3}
       propertyPath: <Data>k__BackingField
       value: 
@@ -53250,5 +53266,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79313a15932b0af4db83d1bd2d7546d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2150470838572180616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363443425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f65bc6e87d9dd439a6c0ff213094a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
